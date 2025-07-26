@@ -5,6 +5,7 @@ from config import settings
 urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/", include("api.urls")),
+    path("", include("client.urls")),
 ]
 
 if settings.DEBUG:
