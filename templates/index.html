@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Inicial{% endblock title %}
+
+{% block content %}
+<main>
+  <section>
+    <h2>Calculadora com Histórico de Operações</h2>
+
+    <div class="calculator">
+      {% csrf_token %}
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <button data-action="clear">C</button>
+        <button data-action="backspace">←</button>
+        <button data-value="/">÷</button>
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="*">×</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="-">-</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="+">+</button>
+
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button data-action="equal">=</button>
+      </div>
+  </div>
+
+  </section>
+</main>
+
+<aside>
+  <h3>Histórico</h3>
+  <button type="button">C</button>
+  <div id="history" class="history-items"></div>
+</aside>
+{% endblock content %}
+
+{% block script %}
+<script type="module" src="{% static 'js/wrapper.js' %}"></script>
+<script type="module" src="{% static 'js/operationHistory.js' %}"></script>
+<script type="module" src="{% static 'js/main.js' %}"></script>
+{% endblock script %}

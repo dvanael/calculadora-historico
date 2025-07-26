@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastro de Usuário{% endblock title %}
+
+{% block header %}{% endblock header %}
+
+{% block content %}
+<main>
+  <section>
+    <h1>Crie sua conta</h1>
+    <form action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Entrar</button>
+    </form>
+    <a href="{% url 'login' %}">Faça seu login!</a>
+  </section>
+</main>
+{% endblock content %}

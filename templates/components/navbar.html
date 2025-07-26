@@ -1,0 +1,18 @@
+<nav>
+  <a href="{% url 'index' %}">
+    <h1>Calculadora</h1>
+  </a>
+  <ul>
+    {% if request.user.is_authenticated %}
+    <li>{{ request.user.name }}</li>
+    <li>
+      <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Sair</button">
+      </form>
+    </li>
+    {% else %}
+    <li><a href="{% url 'login' %}">Entrar</a></li>
+    {% endif %}
+  </ul>
+</nav>
