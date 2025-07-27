@@ -58,6 +58,18 @@ DJANGO_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+# Interface de API apenas em dev
+if DEBUG:
+    RENDER_CLASS = {
+        "DEFAULT_RENDERER_CLASSES": (
+            "rest_framework.renderers.JSONRenderer",
+            "rest_framework.renderers.BrowsableAPIRenderer",
+        )
+    }
+else:
+    RENDER_CLASS = {
+        "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",)
+    }
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
@@ -67,6 +79,8 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
     ],
 }
+
+REST_FRAMEWORK.update(RENDER_CLASS)
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
