@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend:700|Lexend:400');
+
+:root {
+  --text: #e7e6ed;
+  --background: #0b0a10;
+  --primary: #aca9cc;
+  --secondary: #3c3869;
+  --accent: #433e79;
+}
+
+
+
+body {
+  font-family: 'Lexend';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lexend';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+html, body{
+  height: 100%;
+  margin: 0 auto;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+header{
+  background-color: var(--secondary) ;
+}
+
+nav{
+  max-width: 1092px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1em;
+}
+nav h1{
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--text);
+}
+@media screen and (max-width: 425px) {
+  nav h1{
+    font-size: 2em;
+  }
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--text);
+}
+
+li form button{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--text);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+
+a{
+  color: var(--secondary);
+  &:hover{
+    color: var(--accent);
+  }
+}
+
+button{
+  border: 2px var(--primary) solid;
+  border-radius: 0.2em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: normal;
+  background-color: var(--secondary);
+  color: var(--text);
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}

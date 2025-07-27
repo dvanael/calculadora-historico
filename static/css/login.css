@@ -1,0 +1,55 @@
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  width: 100%;
+  margin-inline: 2em;
+}
+
+main .login{
+  max-width: 456px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 1.5em;
+  border-radius: 10px;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+main .login h1{
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.login a{
+  text-align: center;
+  color: var(--text);
+}
+
+form p{
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+label{
+  flex-basis: 100%;
+}
+input{
+  flex-basis: 100%;
+  padding: 0.8em;
+  border-radius: 10px;
+  border: none;
+}
+
+form button[type="submit"]{
+  width: 100%;
+}

@@ -1,12 +1,15 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Cadastro de Usuário{% endblock title %}
+{% block style %}
+ <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock style %}
 
 {% block header %}{% endblock header %}
 
 {% block content %}
 <main>
-  <section>
+  <section class="login">
     <h1>Crie sua conta</h1>
     <form action="{% url 'register' %}" method="post">
       {% csrf_token %}

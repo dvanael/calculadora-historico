@@ -1,0 +1,147 @@
+
+.container{
+  max-width: 1092px;
+  margin: 2em auto;
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .container{
+    display: block;
+  }
+}
+
+main, aside{
+  margin: 0 1em;
+  padding: 0.7em;
+  border-radius: 15px;
+  background-color: var(--secondary);
+}
+main{
+  width: 30em;
+}
+main h2, aside h3{
+  text-align: center;
+  margin-bottom: 0.2em;
+  font-size: 2em;
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  background: #35155D;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.display {
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 32px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: right;
+  overflow-x: auto;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "clear" "bacspace"  "bacspace"  "div"
+    "num"   "num"       "num"       "multi"
+    "num"   "num"       "num"       "sub"
+    "num"   "num"       "num"       "add"
+    "zero"  "zero"      "dot"       "equal";
+  gap: 10px;
+}
+
+.buttons button {
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text);
+  background-color: #512B81;
+  transition: 0.2s;
+}
+
+.buttons button:hover {
+  filter: brightness(1.1);
+}
+
+button[data-value="0"]{
+  grid-column: span 2;
+}
+button[data-action="equal"]{
+  background-color: #61a1d2;
+}
+button[data-action="backspace"]{
+  grid-column: span 2;
+}
+button[data-value="+"], button[data-value="-"], button[data-value="*"], button[data-value="/"]{
+  background-color: #386ac0;
+}
+aside{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+  height: 30em;
+  width: 20em;
+}
+aside .history-header{
+  flex-basis: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-header h3{
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+.history-header h3 i{
+  font-size: 0.8em;
+}
+.history-header button{
+  border-radius: 35px;
+  &:hover{
+    color: #ee2c2c;
+    border-color: #ee2c2c;
+  }
+}
+
+aside .history-items{
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em 0;
+  height: 80%;
+  overflow-y: auto;
+
+  scrollbar-color: var(--primary) transparent;
+  scrollbar-width: thin;
+}
+
+.history-items .item{
+  border: 2px var(--text) solid;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  width: 95%;
+}
+aside span{
+  display: block;
+}
+.parameters{
+  font-size: 1.2em;
+}
+.result{
+  font-size: 1.8em;
+}
+.inclusion-date{
+  opacity: 0.45;
+}

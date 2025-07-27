@@ -75,7 +75,7 @@ async function calculate() {
 
 
   } catch (e) {
-    display.textContent = "Erro mds q tristeza";
+    display.textContent = "ERRO";
   }
 }
 
@@ -112,4 +112,3 @@ document.querySelectorAll("button").forEach((btn) => {
     btn.addEventListener("click", backspace);
   }
 });
-

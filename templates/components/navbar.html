@@ -8,7 +8,7 @@
     <li>
       <form action="{% url 'logout' %}" method="POST">
         {% csrf_token %}
-        <button type="submit">Sair</button">
+        <button class="btn-logout" type="submit">Sair</button">
       </form>
     </li>
     {% else %}

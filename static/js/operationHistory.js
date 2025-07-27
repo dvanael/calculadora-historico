@@ -11,6 +11,7 @@ export function operationsHistory(operations) {
   operations.forEach((operation) => {
     const item = document.createElement("div");
     item.classList.add("item");
+    item.id = operation.id;
     item.innerHTML = `
       <span class="parameters">${operation.parameters}</span>
       <span class="result">${operation.result}</span>
