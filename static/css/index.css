@@ -1,23 +1,23 @@
 
 .container{
   max-width: 1092px;
-  margin: 2em auto;
-  display: flex;
+  margin: 0.5em auto;
+  display: block;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .container{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
-
+main{
+  flex-basis: 50%;
+}
 main, aside{
-  margin: 0 1em;
+  margin: 1em;
   padding: 0.7em;
   border-radius: 15px;
   background-color: var(--secondary);
-}
-main{
-  width: 30em;
 }
 main h2, aside h3{
   text-align: center;
@@ -26,20 +26,20 @@ main h2, aside h3{
 }
 
 .calculator {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
   background: #35155D;
-  padding: 20px;
   border-radius: 16px;
 }
 
 .display {
   background-color: var(--background);
   color: var(--text);
-  font-size: 32px;
+  font-size: 2em;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0.5em;
   text-align: right;
   overflow-x: auto;
 }
@@ -85,11 +85,11 @@ button[data-value="+"], button[data-value="-"], button[data-value="*"], button[d
 }
 aside{
   display: flex;
+  flex-basis: 30%;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1em;
   height: 30em;
-  width: 20em;
 }
 aside .history-header{
   flex-basis: 90%;
