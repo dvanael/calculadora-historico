@@ -10,3 +10,7 @@ env
 # Python/Django
 __pycache__
 *.sqlite3
+staticfiles/
+
+# Docker
+vol/
