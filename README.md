@@ -1,17 +1,14 @@
 
-<h1 align="center" style="font-weight: bold;">Calculadora com Histórico</h1>
-
-<p align="center">
+<section align="center">
+<h1 >Calculadora com Histórico</h1>
+<p>
   <a href="#sobre">Sobre</a> •
   <a href="#tecnologias">Tecnologias</a> •
   <a href="#apresentação">Apresentação</a> •
   <a href="#endpoints">Endpoints</a> •
   <a href="#instalação">Instalação</a>
 </p>
-
-<p align="center">
-  <b></b>
-</p>
+</section>
 
 
 ## Sobre
@@ -31,17 +28,13 @@ Algumas das funcionalidades da aplicação são:
 
 Essas são as tecnologias usadas nesse projeto.
 
-**BACKEND** da API e do Cliente
-
 ![django][DJANGO__BADGE]
 ![python][PYTHON__BADGE]
 ![mysql][MYSQL__BADGE]
-
-**FRONTEND** do Cliente
-
+![docker][DOCKER__BADGE]
 ![html][HTML__BADGE]
 ![css][CSS__BADGE]
-![javascript][javascript__BADGE]
+![javascript][JAVASCRIPT__BADGE]
 
 ---
 
@@ -85,3 +78,4 @@ Acesse [docs/install.md](docs/install.md) e confira como rodar localmente o sist
 [CSS__BADGE]: https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css&logoColor=blue
 [JAVASCRIPT__BADGE]: https://img.shields.io/badge/-JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor
 [MYSQL__BADGE]: https://img.shields.io/badge/-MySQL-0d1117?style=for-the-badge&logo=mysql&logoColor
+[DOCKER__BADGE]: https://img.shields.io/badge/-Docker-0d1117?style=for-the-badge&logo=docker&logoColor
