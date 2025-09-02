@@ -40,7 +40,7 @@ Essas são as tecnologias usadas nesse projeto.
 
 ## Apresentação
 
-Fotos e vídeos do sistema funcionando. Você pode acessar o sistema [aqui](https://pipa.eastus2.cloudapp.azure.com/)!
+Fotos e vídeos do sistema funcionando.
 
 <img alt="GIF da Calculadora Funcionando" src="docs/calc.gif" />
 
