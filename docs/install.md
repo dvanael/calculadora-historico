@@ -1,70 +1,26 @@
 
-## Instalação
+# Instalação do Projeto
 
 Aqui o passo-a-passo para instalação local do projeto.
 
-### Configurando o ambiente
-
- - Clone o [repositório](https://github.com/dvanael/calculadora-historico)
+- Clone o [repositório](https://github.com/dvanael/calculadora-historico)
 
 ```bash
 git clone https://github.com/dvanael/calculadora-historico.git
 ```
 
-- Crie um ambiente virtual
+- Acesse a página do projeto
 
 ```bash
-python -m venv .venv
+cd calculadora-historico/
 ```
 
-- Ative o ambiente virtual
+## Usando Docker
 
-_windows_
-```powershell
-.venv/Scripts/activate
-```
-_linux, macOs_
-```bash
-source .venv/bin/activate
-```
-
----
-
-### Configurando sua máquina
-
-- Instale as dependências
+Com o [Docker](https://docs.docker.com/get-started/get-docker/) e [Docker Compose](https://docs.docker.com/compose/install/) instalados na sua máquina. Execute:
 
 ```bash
-pip install -r requirements.txt
+docker-compose up --build  
 ```
 
-- Crie as variáveis de ambiente em um arquivo `.env`
-
-```
-SECRET_KEY=dev-key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-CORS_ORIGINS=http://localhost, http://127.0.0.1
-```
-
-- Faça as migrações necessárias
-
-```bash
-python manage.py migrate
-```
-
----
-
-### Rodando o servidor
-
-- Rode o servidor
-
-```bash
-python manage.py runserver
-```
-
-- Acesse a aplicação localmente
-
-  - **[localhost:8000/](http://localhost:8000/)**
-
----
+> Acesse em [localhost:8000/](http://localhost:8000)
